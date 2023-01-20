@@ -1,0 +1,10 @@
+kubectl apply -f hpa.yaml 
+minikube addons enable portainer
+minikube addons list
+kubectl get node -o wide
+kubectl describe pod static-web
+kubectl port-forward static-web 88:80
+kubectl exec nama-pod -it -- /bin/sh
+curl http://cluster-ip:port/
+minikube ip
+
